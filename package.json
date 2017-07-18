@@ -1,5 +1,5 @@
 {
-  "name": "redux-tracer",
+  "name": "@workpop/redux-tracer",
   "version": "0.0.0",
   "description": "Create New Relic Tracers and bind them to React Components",
   "main": "lib/index.js",
