@@ -1,0 +1,50 @@
+{
+  "name": "redux-tracer",
+  "version": "0.0.0",
+  "description": "Create New Relic Tracers and bind them to React Components",
+  "main": "lib/index.js",
+  "author": "Workpop",
+  "license": "MIT",
+  "peerDependencies": {
+    "@workpop/dux": "2.1.1",
+    "lodash": "4.17.4",
+    "reselect": "3.0.1"
+  },
+  "devDependencies": {
+    "@workpop/dux": "^2.1.1",
+    "@workpop/eslint-config-workpop": "^0.0.9",
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^7.1.0",
+    "babel-plugin-lodash": "^3.2.11",
+    "babel-plugin-syntax-flow": "^6.8.0",
+    "babel-plugin-transform-export-extensions": "^6.8.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "chai": "^4.1.0",
+    "eslint": "^3.9.0",
+    "jsdom": "^11.1.0",
+    "jsdom-global": "^3.0.2",
+    "lodash": "^4.17.4",
+    "mocha": "^3.1.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1",
+    "standard-version": "^4.0.0"
+  },
+  "scripts": {
+    "release": "standard-version",
+    "prepublish": "babel ./src --ignore test --out-dir ./lib",
+    "lint": "eslint ./src",
+    "fix": "eslint ./src --fix",
+    "testonly": "mocha -r jsdom-global/register ./test --compilers js:babel-register",
+    "test": "npm run lint && npm run testonly",
+    "test-watch": "npm run testonly -- --watch --watch-extensions js"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "presets": [
+    "env",
+    "stage-0"
+  ],
+  "plugins": [
+    "transform-flow-strip-types",
+    "transform-object-assign",
+    "transform-object-rest-spread",
+    "transform-export-extensions",
+    [
+      "lodash",
+      {
+        "id": [
+          "lodash",
+          "recompose"
+        ]
+      }
+    ]
+  ]
+}
